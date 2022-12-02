@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Chessboard.css";
-const verticalAxis = ["1", "2", "3", "4", "5", "6", "7", "8"];
-const horizontalAxis = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 export default function Chessboard() {
   const [pos, setPos] = useState();
@@ -66,8 +64,8 @@ export default function Chessboard() {
 
   const renderBoard = () => {
     const positions = [];
-    for (let j = 0; j < verticalAxis.length; j++) {
-      for (let i = 0; i < horizontalAxis.length; i++) {
+    for (let j = 0; j < 8; j++) {
+      for (let i = 0; i < 8; i++) {
         const num = j + i + 2;
         // const dis = [horizontalAxis[i], verticalAxis[j]];
         if (num % 2 === 0) {
